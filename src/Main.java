@@ -12,24 +12,24 @@ public class Main extends Indent {
     static String continueEntering;
 
     public static void main(String[] args) {
-        System.out.println("Данные озёр");
+        System.out.println("Р”Р°РЅРЅС‹Рµ РѕР·С‘СЂ");
         commands = new String[]{
-                "Добавить",                   // 1
-                "Вывести всё",                // 2
-                "Выйти"                       // 3
+                "Р”РѕР±Р°РІРёС‚СЊ",                   // 1
+                "Р’С‹РІРµСЃС‚Рё РІСЃС‘",                // 2
+                "Р’С‹Р№С‚Рё"                       // 3
         };
         int command;
         do {
             showCommands();
-            System.out.print("Введите команду: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ: ");
             command = sc.nextInt();
-            sc.nextLine(); // этот вызов удаляет символ перевода строки
+            sc.nextLine(); // СЌС‚РѕС‚ РІС‹Р·РѕРІ СѓРґР°Р»СЏРµС‚ СЃРёРјРІРѕР» РїРµСЂРµРІРѕРґР° СЃС‚СЂРѕРєРё
             runCommand(command);
         } while (true);
     }
 
     public static void showCommands() {
-        System.out.println("Команды");
+        System.out.println("РљРѕРјР°РЅРґС‹");
         int numberCommand;
         for (int i = 0; i < commands.length; i++) {
             numberCommand = i + 1;
@@ -46,16 +46,16 @@ public class Main extends Indent {
         else if (command == 3)
             System.exit(0);
         else
-            System.out.println("Такой команды нет. Повторите попытку\n");
+            System.out.println("РўР°РєРѕР№ РєРѕРјР°РЅРґС‹ РЅРµС‚. РџРѕРІС‚РѕСЂРёС‚Рµ РїРѕРїС‹С‚РєСѓ\n");
     }
 
     public static void requestLakes() {
-        System.out.println("Введите озёра:");
+        System.out.println("Р’РІРµРґРёС‚Рµ РѕР·С‘СЂР°:");
         do {
             requestLake();
             Lake lake = new Lake(name, mainland, area);
             lakes.add(lake);
-            System.out.print("Продолжить ввод озёр? (y/n): ");
+            System.out.print("РџСЂРѕРґРѕР»Р¶РёС‚СЊ РІРІРѕРґ РѕР·С‘СЂ? (y/n): ");
             continueEntering = sc.next();
             sc.nextLine();
             showEmptyParagraph();
@@ -63,18 +63,18 @@ public class Main extends Indent {
     }
 
     public static void requestLake() {
-        System.out.print("Наименование: ");
+        System.out.print("РќР°РёРјРµРЅРѕРІР°РЅРёРµ: ");
         name = sc.nextLine();
-        System.out.print("Материк: ");
+        System.out.print("РњР°С‚РµСЂРёРє: ");
         mainland = sc.nextLine();
-        System.out.print("Площадь: ");
+        System.out.print("РџР»РѕС‰Р°РґСЊ: ");
         area = sc.nextDouble();
         sc.nextLine();
     }
 
 
     public static void showLakes() {
-        System.out.print("Озера");
+        System.out.print("РћР·РµСЂР°");
         boolean isExist = false;
         int position = 1;
         for (Lake lake : lakes) {
@@ -85,7 +85,7 @@ public class Main extends Indent {
         }
         if (!isExist) {
             showEmptyParagraph();
-            System.out.println("Пусто");
+            System.out.println("РџСѓСЃС‚Рѕ");
         }
         showEmptyParagraph();
     }

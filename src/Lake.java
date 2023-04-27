@@ -12,9 +12,9 @@ public class Lake implements Comparable<Lake> {
 
     @Override
     public String toString() {
-        return "Наименование: " + NAME +
-                "\nМатерик: " + MAINLAND +
-                "\nПлощадь: " + AREA;
+        return "РќР°РёРјРµРЅРѕРІР°РЅРёРµ: " + NAME +
+                "\nРњР°С‚РµСЂРёРє: " + MAINLAND +
+                "\nРџР»РѕС‰Р°РґСЊ: " + AREA;
     }
 
     public String getName() {
@@ -31,9 +31,6 @@ public class Lake implements Comparable<Lake> {
 
     @Override
     public int compareTo(Lake lake) {
-        boolean isSort = AREA != lake.AREA;
-        if (isSort)
-            return (int) (AREA - lake.AREA);
-        return 1;
+        return Double.compare(AREA, lake.AREA);
     }
 }
